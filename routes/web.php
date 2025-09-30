@@ -3,6 +3,5 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return response()->json(['data' => \App\Models\Post::latest()->get()]);
 });
-// Web routes are not used in this API-only application.
