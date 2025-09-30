@@ -14,6 +14,8 @@ Route::get('/test', function () {
 Route::get('/register', [AuthController::class, 'recent']);
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
+Route::get('/login', [AuthController::class, 'login']);
+Route::get('/users', [UserController::class, 'index']);
 Route::apiResource('posts', PostController::class)->only(['index', 'store', 'show', 'destroy']);
 Route::apiResource('incident-types', IncidentTypeController::class)->only(['index', 'show']);
 Route::apiResource('incidents', IncidentController::class)->only(['index', 'show']);

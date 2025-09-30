@@ -8,3 +8,7 @@ Route::get('/', function () {
 });
 
 Route::get('/summary', [SummaryController::class, 'index']);
+
+Route::get('/users', function () {
+    return response()->json(['data' => \App\Models\User::latest()->get()]);
+});
