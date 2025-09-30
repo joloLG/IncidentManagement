@@ -45,6 +45,21 @@
             </article>
         @endforelse
 
+        <h2>Latest Incident Types</h2>
+        @forelse ($latestIncidentTypes as $incidentType)
+            <article class="post">
+                <h3>{{ $incidentType->name }}</h3>
+                <p>{{ $incidentType->description ?? 'No description provided.' }}</p>
+                <small>Created {{ $incidentType->created_at->diffForHumans() }}</small>
+            </article>
+        @empty
+            <article class="post">
+                <h3>No incident types yet</h3>
+                <p>Create one via the API and refresh to see it here.</p>
+                <small>Waiting for first incident type</small>
+            </article>
+        @endforelse
+
         <h2>Latest Registered Users</h2>
         @forelse ($latestUsers as $user)
             <article class="post">

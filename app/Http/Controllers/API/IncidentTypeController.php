@@ -12,8 +12,8 @@ class IncidentTypeController extends Controller
 {
     public function index()
     {
-        $incidentTypes = IncidentType::all();
-        return ApiResponse::success($incidentTypes);
+        $incidentTypes = IncidentType::latest()->take(10)->get();
+        return ApiResponse::success($incidentTypes, 'Recent incident types');
     }
 
     public function store(StoreIncidentTypeRequest $request)

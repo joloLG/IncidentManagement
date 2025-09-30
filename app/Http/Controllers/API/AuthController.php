@@ -50,6 +50,15 @@ class AuthController extends Controller
         ]);
     }
 
+    public function recent()
+    {
+        $users = User::latest()->take(10)->get();
+
+        return ApiResponse::success([
+            'users' => $users,
+        ], 'Recent registrations');
+    }
+
 public function logout(Request $request)
 {
     $request->user()->currentAccessToken()->delete();

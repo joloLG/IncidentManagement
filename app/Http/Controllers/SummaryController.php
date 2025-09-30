@@ -18,6 +18,7 @@ class SummaryController extends Controller
         $postsCount = Post::count();
         $latestPosts = Post::latest()->take(5)->get();
         $latestUsers = User::latest()->take(5)->get();
+        $latestIncidentTypes = IncidentType::latest()->take(5)->get();
 
         return view('summary', [
             'usersCount' => $usersCount,
@@ -26,6 +27,7 @@ class SummaryController extends Controller
             'postsCount' => $postsCount,
             'latestPosts' => $latestPosts,
             'latestUsers' => $latestUsers,
+            'latestIncidentTypes' => $latestIncidentTypes,
         ]);
     }
 }
