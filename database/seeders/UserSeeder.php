@@ -20,6 +20,7 @@ class UserSeeder extends Seeder
                 'age' => 30,
                 'address' => '123 Main Street, Springfield',
                 'role' => 'admin',
+                'profile_picture' => null,
             ],
             [
                 'first_name' => 'Bob',
@@ -29,7 +30,8 @@ class UserSeeder extends Seeder
                 'mobile_number' => '555-0102',
                 'age' => 28,
                 'address' => '456 Elm Street, Springfield',
-                'role' => 'user',
+                'role' => 'patient',
+                'profile_picture' => null,
             ],
             [
                 'first_name' => 'Carol',
@@ -40,6 +42,7 @@ class UserSeeder extends Seeder
                 'age' => 34,
                 'address' => '789 Oak Street, Springfield',
                 'role' => 'provider',
+                'profile_picture' => null,
             ],
         ];
 
