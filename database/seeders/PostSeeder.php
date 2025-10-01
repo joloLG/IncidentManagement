@@ -11,16 +11,8 @@ class PostSeeder extends Seeder
     {
         $posts = [
             [
-                'title' => 'System Launch Reminder',
-                'content' => 'Remember to verify all incident reports before end of day.',
-            ],
-            [
-                'title' => 'Scheduled Maintenance',
-                'content' => 'The Incident Management API will be down for maintenance on Saturday at 10 PM.',
-            ],
-            [
-                'title' => 'New Incident Type Added',
-                'content' => 'Security breach category has been added for more precise reporting.',
+                'title' => 'Important Notice',
+                'content' => 'Mag-ingat ang lahat at maging handa sa ano mang sakuna',
             ],
         ];
 
